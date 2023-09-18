@@ -12,7 +12,8 @@ class InputField extends StatefulWidget {
     required this.labelText,
     this.inputFormatters,
     this.width = 390, // Default width
-    this.height = 72, required this.label, // Default height
+    this.height = 72,
+    required this.label, // Default height
   }) : super(key: key);
 
   @override
@@ -31,34 +32,45 @@ class _InputFieldState extends State<InputField> {
             inputFormatters: widget.inputFormatters,
             decoration: InputDecoration(
               labelText: null, // Set the label text to null
-              floatingLabelBehavior: FloatingLabelBehavior.never, // Hide the default floating label
+              floatingLabelBehavior: FloatingLabelBehavior.never,
+              // Hide the default floating label
               hintText: widget.labelText, // Use the label text as hint text
-              hintStyle: TextStyle(
-                color: Color.fromARGB(255, 108, 127, 156),
+              hintStyle: const TextStyle(
+                color: Color(0XFF546F99),
                 fontSize: 12,
               ),
-              // Remove the border by setting it to InputBorder.none
-              border: InputBorder.none,
-              enabledBorder: InputBorder.none,
+              // Use OutlineInputBorder with rounded border
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5.0),
+                borderSide: BorderSide(
+                  color: Colors.transparent, // Transparent border color
+                ),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5.0),
+                borderSide: BorderSide(
+                  color: Colors.transparent, // Transparent border color
+                ),
+              ),
               filled: true,
-              fillColor: Color.fromARGB(255, 21, 72, 150),
+              fillColor: const Color.fromARGB(255, 21, 72, 150),
             ),
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
           ),
           Transform.translate(
-            offset: Offset(10, -15), // Adjust the vertical offset as needed
+            offset: const Offset(10, -15), // Adjust the vertical offset as needed
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 4),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 21, 72, 150), // Background color of the label text
-                borderRadius: BorderRadius.circular(5),
+                color: const Color.fromARGB(255, 21, 72, 150), // Background color of the label text
+                borderRadius: BorderRadius.circular(2),
               ),
               child: Padding(
                 padding: const EdgeInsets.only(top: 7),
                 child: Text(
                   widget.label,
-                  style: TextStyle(
-                    color: Colors.white,
+                  style: const TextStyle(
+                    color: Color(0XFFE7E9ED),
                     backgroundColor: Colors.transparent, // Transparent background for the text
                   ),
                 ),

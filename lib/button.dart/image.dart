@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProfileImage extends StatelessWidget {
+  const ProfileImage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -8,9 +10,9 @@ class ProfileImage extends StatelessWidget {
       children: [
         Center(
           child: Image.asset(
-            'assets/images/profile.png', // Replace with your image asset path
-            width: 134, // Adjust the image width as needed
-            height: 123, // Adjust the image height as needed
+            'assets/images/profile.png',
+            width: 134, 
+            height: 123, 
           ),
         ),
      // Adjust the spacing between the image and text
@@ -19,7 +21,7 @@ class ProfileImage extends StatelessWidget {
         const Text(
           'alexander@example.com',
           style:
-              TextStyle(fontSize: 12, color: Color.fromARGB(255, 38, 86, 163)),
+              TextStyle(fontSize: 12, color: Color(0XFF567F9C)),
         ),
 
       ],

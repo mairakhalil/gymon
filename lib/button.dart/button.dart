@@ -14,16 +14,16 @@ class Buttons extends StatelessWidget {
         child: ElevatedButton(
             onPressed: onPressed,
             style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Color(0XFF10C0F7
+                backgroundColor: MaterialStateProperty.all<Color>(const Color(0XFF10C0F7
 )),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)
                   ),
                 )),
-            child: Text(
+            child: const Text(
               "Save the Changes",
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style: TextStyle(color: Color(0XFFE7E9ED), fontSize: 20),
             )));
   }
 }
